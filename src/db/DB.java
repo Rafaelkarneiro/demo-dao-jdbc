@@ -21,8 +21,7 @@ public class DB {
 				conn = DriverManager.getConnection(url, props);
 			}
 			catch (SQLException e) {
-				e.printStackTrace();
-				//throw new DbException(e.getMessage());
+				throw new DbException(e.getMessage());
 			}
 		}
 		return conn;
